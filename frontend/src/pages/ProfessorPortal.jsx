@@ -10,7 +10,7 @@ export default function ProfessorPortal() {
         description="Convert syllabi into quests and missions, define reward logic, and launch campaigns tied to the three pilot subjects."
       />
 
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         <Stat label="Pilot subjects" value={pilotSubjects.length} note="CP1, DS, DBM" />
         <Stat label="Quest campaigns" value={professorCampaigns.length} note="Reusable across sections" tone="blue" />
         <Stat label="Reward engine" value="Rules" note="Early Bird + Perfect Score" tone="amber" />
@@ -18,7 +18,7 @@ export default function ProfessorPortal() {
 
       <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
         <Card title="New Quest Campaign" subtitle="Campaign composer">
-          <div className="grid gap-3 md:grid-cols-2">
+          <div className="grid gap-3 sm:grid-cols-2">
             {['Subject', 'Campaign title', 'Due window', 'XP budget', 'Badge trigger', 'Publish status'].map((field) => (
               <div key={field} className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-500">{field}</p>
@@ -38,7 +38,7 @@ export default function ProfessorPortal() {
       </div>
 
       <Card title="Active Campaigns" subtitle="Pilot rollout">
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {professorCampaigns.map((campaign) => (
             <article key={campaign.id} className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
               <div className="flex items-start justify-between gap-3">

@@ -138,7 +138,7 @@ export default function ProgressMap(props) {
 
   return (
     <section
-      className={`min-h-screen bg-[radial-gradient(circle_at_top,_rgba(32,94,67,0.14),_transparent_38%),linear-gradient(180deg,_#f5f7f2_0%,_#eef3ed_100%)] px-4 py-6 text-slate-900 sm:px-6 lg:px-8 ${className}`}
+      className={`min-h-screen bg-[radial-gradient(circle_at_top,_rgba(32,94,67,0.14),_transparent_38%),linear-gradient(180deg,_#f5f7f2_0%,_#eef3ed_100%)] px-3 py-4 text-slate-900 sm:px-6 lg:px-8 ${className}`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       aria-label="SmartLearn dashboard"
@@ -154,7 +154,7 @@ export default function ProgressMap(props) {
               <p className="mt-1 text-sm text-emerald-50/80">{subtitle} · {studentRole}</p>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 text-center text-xs sm:min-w-[340px]">
+            <div className="grid grid-cols-1 gap-3 text-center text-xs sm:grid-cols-3 sm:min-w-[340px]">
               <div className="rounded-2xl bg-white/10 px-4 py-3 backdrop-blur">
                 <p className="text-emerald-100/75">Student</p>
                 <p className="mt-1 truncate font-semibold text-white">{studentName}</p>
@@ -215,10 +215,10 @@ export default function ProgressMap(props) {
               </div>
             </div>
 
-            <div className="relative min-h-[520px] px-4 py-5 sm:px-6">
+            <div className="relative min-h-[360px] px-3 py-4 sm:min-h-[520px] sm:px-6">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(148,163,184,0.14),_transparent_55%)]" />
 
-              <svg className="absolute inset-0 h-full w-full" aria-hidden="true">
+              <svg className="absolute inset-0 hidden h-full w-full sm:block" aria-hidden="true">
                 <path
                   d="M 90 470 C 180 360, 220 340, 290 300 S 430 170, 540 220 S 680 360, 780 130"
                   fill="none"

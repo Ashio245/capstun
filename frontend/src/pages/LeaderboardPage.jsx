@@ -10,7 +10,7 @@ export default function LeaderboardPage() {
         description="WebSocket-ready ranking board for instant XP updates, subject filtering, and room-scoped leaderboards."
       />
 
-      <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         <Stat label="Subjects in scope" value="3" note="Pilot only" />
         <Stat label="Live sessions" value="24" note="Socket rooms" tone="blue" />
         <Stat label="Leaderboard refresh" value="<1s" note="XP broadcast" tone="amber" />
@@ -19,7 +19,7 @@ export default function LeaderboardPage() {
       <Card title="Top Rankings" subtitle="Rank board">
         <div className="space-y-3">
           {leaderboardRows.map((row, index) => (
-            <div key={row.id} className="flex flex-col gap-3 rounded-3xl border border-slate-200 bg-slate-50 px-4 py-4 md:flex-row md:items-center md:justify-between">
+            <div key={row.id} className="flex flex-col gap-3 rounded-3xl border border-slate-200 bg-slate-50 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <p className="text-sm font-semibold text-slate-900">#{index + 1} {row.name}</p>
                 <p className="text-xs text-slate-500">{row.role}</p>

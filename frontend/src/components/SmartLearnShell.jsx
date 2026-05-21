@@ -11,22 +11,22 @@ const navigation = [
 
 export default function SmartLearnShell() {
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(32,94,67,0.14),_transparent_38%),linear-gradient(180deg,_#f5f7f2_0%,_#eef3ed_100%)] text-slate-900">
+    <div className="min-h-screen overflow-x-hidden bg-[radial-gradient(circle_at_top,_rgba(32,94,67,0.14),_transparent_38%),linear-gradient(180deg,_#f5f7f2_0%,_#eef3ed_100%)] text-slate-900">
       <div className="mx-auto flex min-h-screen w-full max-w-[1600px] flex-col lg:flex-row">
-        <aside className="border-b border-white/70 bg-[#0f5a3e] px-5 py-6 text-white lg:w-72 lg:border-b-0 lg:border-r">
+        <aside className="border-b border-white/70 bg-[#0f5a3e] px-4 py-4 text-white lg:w-72 lg:border-b-0 lg:border-r lg:px-5 lg:py-6">
           <Link to="/" className="block">
             <p className="text-xs font-semibold uppercase tracking-[0.35em] text-emerald-100/75">SmartLearn CITCS</p>
             <h1 className="mt-2 text-2xl font-semibold tracking-tight">PLMun LMS</h1>
           </Link>
 
-          <nav className="mt-8 grid gap-2">
+          <nav className="mt-5 flex gap-2 overflow-x-auto pb-2 lg:mt-8 lg:grid lg:gap-2 lg:overflow-visible lg:pb-0">
             {navigation.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 end={item.to === '/'}
                 className={({ isActive }) =>
-                  `rounded-2xl px-4 py-3 text-sm font-medium transition ${isActive ? 'bg-white text-[#0f5a3e]' : 'bg-white/10 text-white/85 hover:bg-white/15'}`
+                  `whitespace-nowrap rounded-2xl px-4 py-3 text-sm font-medium transition ${isActive ? 'bg-white text-[#0f5a3e]' : 'bg-white/10 text-white/85 hover:bg-white/15'}`
                 }
               >
                 {item.label}
@@ -39,7 +39,7 @@ export default function SmartLearnShell() {
           </div>
         </aside>
 
-        <main className="flex-1">
+        <main className="min-w-0 flex-1">
           <Outlet />
         </main>
       </div>
